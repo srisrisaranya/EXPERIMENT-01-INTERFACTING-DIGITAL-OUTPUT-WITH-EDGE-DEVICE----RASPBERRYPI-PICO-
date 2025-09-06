@@ -52,7 +52,7 @@ while True:
     print("LED IS OFF")
     time.sleep(1)
  ```
-THREE LED IN SERIES WITH TIME DELAY:
+# THREE LED IN SERIES WITH TIME DELAY:
 ```
 from machine import Pin
 import time
