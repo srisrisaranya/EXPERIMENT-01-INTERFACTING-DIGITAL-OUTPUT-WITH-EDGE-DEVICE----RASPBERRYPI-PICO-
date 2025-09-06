@@ -1,7 +1,7 @@
 # EXPERIMENT-01-INTERFACTING-DIGITAL-OUTPUT-WITH-EDGE-DEVICE---(RASPBERRYPI-PICO)
-### NAME 
-### DEPARTMENT 
-### ROLL NO 
+### NAME SARANYA S
+### DEPARTMENT B.E CSE-IOT
+### ROLL NO 212223110044
 ### DATE OF EXPERIMENT 
 
 ### AIM
@@ -40,24 +40,37 @@ Connect the cathode (shorter leg) of the LED to GND (ground).
 
 
 ## PROGRAM (MicroPython)
+
+# LED WITH TIME DELAY:
 ```
+from machine import Pin
+import time
+print("Hello pico")
+led = Pin(0, Pin.OUT)
+while True:
+    led.value(1)
+    print("LED IS ON")
+    time.sleep(1)
+    led.value(0)
+    print("LED IS OFF")
+    time.sleep(1)
+ ```
+# LED AND BUZZER IN SERIES WITH TIME DELAY:
+```
+from machine import Pin
+import time
+print("Hello pico")
 
 
- 
+```
+# FIGURE -01 OUPUT: 
+<img width="1918" height="974" alt="Screenshot 2025-08-09 215838" src="https://github.com/user-attachments/assets/65a7a6a2-6acf-44e6-9dd2-0478d0911717" />
 
 
+# FIGURE -02 OUTPUT: 
+<img width="1919" height="976" alt="Screenshot 2025-08-09 222153" src="https://github.com/user-attachments/assets/0202e145-22b7-46f3-86de-b616f40c4d8e" />
 
- 
-````
-
-### OUPUT  
-
-
-# FIGURE -02 ADD TITILE HERE 
-
-#  FIGURE -03 ADD TITILE HERE 
-
-# FIGURE -04 ADD TITLE HERE 
+# FIGURE -03 
 
 
  
