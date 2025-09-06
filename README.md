@@ -19,10 +19,7 @@ USB Cable
  ![image](https://github.com/user-attachments/assets/abeabf63-f321-471e-a991-3adaa9043a8b)
 
  
- 
- 
- 
- ### FIGURE-01 RASPI PICO PINOUT DIAGRAM 
+### FIGURE-01 RASPI PICO PINOUT DIAGRAM 
 
 
 
@@ -55,24 +52,79 @@ while True:
     print("LED IS OFF")
     time.sleep(1)
  ```
+THREE LED IN SERIES WITH TIME DELAY:
+```
+from machine import Pin
+import time
+print("Hello pico")
+led1=Pin(0,Pin.OUT)
+led2=Pin(1,Pin.OUT)
+led3=Pin(2,Pin.OUT)
+while True:
+    led1.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led1.value(0)
+    print("LED IS OFF")
+    time.sleep(1)
+    led2.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led2.value(0)
+    print("LED IS OFF")
+    time.sleep(1)
+    led3.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led3.value(0)
+    print("LED IS OFF")
+    time.sleep(1)
+```
 # LED AND BUZZER IN SERIES WITH TIME DELAY:
 ```
 from machine import Pin
 import time
 print("Hello pico")
-
-
+led1=Pin(0,Pin.OUT)
+led2=Pin(1,Pin.OUT)
+led3=Pin(2,Pin.OUT)
+buzzer=Pin(4,Pin.OUT)
+while True:
+    led1.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led1.value(0)
+    print("LED IS OFF")
+    time.sleep(1)
+    led2.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led2.value(0)
+    print("LED IS OFF")
+    time.sleep(1)
+    led3.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led3.value(0)
+    print("LED IS OFF")
+    time.sleep(1)
+    buzzer.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    buzzer.value(0)
+    print("LED IS OFF")
+    time.sleep(1)
 ```
-# FIGURE -01 OUPUT: 
+# FIGURE -01  LED WITH TIME DELAY OUPUT: 
 <img width="1918" height="974" alt="Screenshot 2025-08-09 215838" src="https://github.com/user-attachments/assets/65a7a6a2-6acf-44e6-9dd2-0478d0911717" />
 
 
-# FIGURE -02 OUTPUT: 
+# FIGURE -02 THREE LED IN SERIES WITH TIME DELAY OUTPUT: 
 <img width="1919" height="976" alt="Screenshot 2025-08-09 222153" src="https://github.com/user-attachments/assets/0202e145-22b7-46f3-86de-b616f40c4d8e" />
 
-# FIGURE -03 
+# FIGURE -03  LED AND BUZZER IN SERIES WITH TIME DELAY OUTPUT:
+<img width="1919" height="976" alt="Screenshot 2025-08-09 222951" src="https://github.com/user-attachments/assets/e16d941d-6938-4d65-827f-adb7b4e90f60" />
 
 
- 
 ## RESULTS
 The LED connected to the Raspberry Pi Pico successfully turns ON and OFF at  user defined time  confirming the proper interfacing of a digital output.
